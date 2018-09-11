@@ -2,6 +2,7 @@
 
 require_once 'src/AreaCalculator.php';
 require_once 'src/Objects.php';
+require_once 'src/SumCalculatorOutputter.php';
 
 $shapes = array(
     new Circle(2),
@@ -10,5 +11,8 @@ $shapes = array(
 );
 
 $areas = new AreaCalculator($shapes);
+$output = new SumCalculatorOutputter($areas);
 
-echo $areas->output();
+echo $output->json();
+echo $output->haml();
+echo $output->html();
