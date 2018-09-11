@@ -3,24 +3,27 @@
 class SumCalculatorOutputter
 {
 
-    public function __construct($areas)
+    protected $calculator;
+
+    public function __construct(AreaCalculator $calculator)
     {
-        $this->areas = $areas;
+        $this->calculator = $calculator;
     }
 
     public function json()
     {
-        // logic to print as json
-    }
-
-    public function haml()
-    {
-        // logic to print as haml
+        $data = ['sum' => $this->calculator->sum()];
+        return json_encode($data);
     }
 
     public function html()
     {
-        // logic to print as html
+        return implode('', array(
+            '',
+                'Sum of the areas of provided shapes: ',
+                $this->calculator->sum(),
+            ''
+        ));
     }
 
 }
