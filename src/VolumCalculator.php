@@ -9,6 +9,6 @@ class VolumeCalculator extends AreaCalculator
 
     public function sum() {
         // logic to calculate the volumes and then return and array of output
-        return array($summedData);
+        return $summedData;
     }
 }    
