@@ -24,13 +24,4 @@ class AreaCalculator
         return array_sum($area);
     }   
 
-    public function output() 
-    {
-        return implode('', array(
-            "",
-                "Sum of the areas of provided shapes: ",
-                $this->sum(),
-            ""
-        ));
-    }
 }
