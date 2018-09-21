@@ -18,12 +18,7 @@ class SumCalculatorOutputter
 
     public function html()
     {
-        return implode('', array(
-            '',
-                'Sum of the areas of provided shapes: ',
-                $this->calculator->sum(),
-            ''
-        ));
+        return '<p>Sum of the areas of provided shapes: ' . $this->calculator->sum() . '</p>';
     }
 
 }

@@ -10,7 +10,7 @@ class AreaCalculator
         $this->shapes = $shapes;
     }
 
-    public function sum() 
+    public function sum()
     {
         foreach ($this->shapes as $shape) {
             if (is_a($shape, 'ShapeInterface')) {
