@@ -18,11 +18,6 @@ class AreaCalculator
 
     public function output() 
     {
-        return implode('', array(
-            "",
-                "Sum of the areas of provided shapes: ",
-                $this->sum(),
-            ""
-        ));
+        return "Sum of the areas of provided shapes: " . $this->sum();
     }
 }
