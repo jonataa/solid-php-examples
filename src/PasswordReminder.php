@@ -4,8 +4,8 @@ class PasswordReminder
 {
     private $dbConnection;
 
-    public function __construct() 
+    public function __construct(MySQLConnection $dbConnection) 
     {
-        $this->dbConnection = new MySQLConnection('foo:bar');
+        $this->dbConnection = $dbConnection;
     }
 } 
